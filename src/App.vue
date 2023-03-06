@@ -2,7 +2,10 @@
 </script>
 
 <template>
-  <RouterView />
+  <NavBar />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>

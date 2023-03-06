@@ -1,5 +1,6 @@
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
+import './styles/main.css'
 
 import autoRoutes from 'pages-generated'
 import { ViteSSG } from 'vite-ssg'

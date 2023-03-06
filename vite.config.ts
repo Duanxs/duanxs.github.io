@@ -22,7 +22,11 @@ export default defineConfig({
     }),
 
     AutoImport({
-      imports: ['vue', 'vue-router'],
+      imports: ['vue', 'vue-router', '@vueuse/core'],
+      dirs: [
+        'src/composables',
+      ],
+      vueTemplate: true,
     }),
 
     Components({
