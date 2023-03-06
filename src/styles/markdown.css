@@ -1,0 +1,48 @@
+.prose pre:not(.shiki) {
+  padding: 0;
+}
+
+.prose .shiki {
+  /* font-family: 'DM Mono', monospace; */
+  /* font-size: 1.2rem; */
+  /* line-height: 1.4; */
+}
+
+.prose img {
+  width: 100%;
+}
+
+.shiki-light {
+  background: #f8f8f8 !important;
+}
+.shiki-dark {
+  background: #161618 !important;
+}
+
+.material-theme-palenight {
+  background: var(--code-bg) !important;
+}
+
+html.dark .shiki-light {
+  display: none;
+}
+
+html:not(.dark) .shiki-dark {
+  display: none;
+}
+
+pre, pre[class*="language-"] {
+  padding: 1.575rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 30px 0;
+  color: white;
+  overflow: auto;
+}
+
+.highlighted-line {
+  background-color: var(--highlight-line-bg);
+  display: block;
+  margin: 0 -1.575rem;
+  padding: 0 1.575rem;
+}

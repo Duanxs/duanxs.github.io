@@ -1,3 +1,12 @@
+@import './markdown.css';
+
+:root {
+  /* --un-prose-body: #bbb; */
+  --un-prose-links: #000;
+  --highlight-line-bg: #161618;
+  --code-bg: #292b30;
+}
+
 html,
 body,
 #app {
@@ -7,6 +16,10 @@ body,
 }
 
 html.dark {
-  background: #121212;
+  --un-prose-body: #bbb;
+  --un-prose-links: #ddd;
+  --highlight-line-bg: #292b30;
+  --code-bg: #161618;
+  background: #1e1e20;
   color-scheme: dark;
 }

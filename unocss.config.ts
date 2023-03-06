@@ -1,4 +1,6 @@
-import { defineConfig, presetAttributify, presetIcons, presetUno } from 'unocss'
+import {
+  defineConfig, presetAttributify, presetIcons, presetTypography, presetUno,
+} from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -10,7 +12,13 @@ export default defineConfig({
         'vertical-align': 'text-bottom',
       },
     }),
+    presetTypography(),
     presetAttributify(),
     presetUno(),
   ],
+  // transformers: [
+  //   transformerDirectives(),
+  //   transformerVariantGroup(),
+  // ],
+  safelist: 'prose prose-sm m-auto text-left'.split(' '),
 })
