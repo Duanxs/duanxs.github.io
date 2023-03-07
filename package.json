@@ -2,7 +2,8 @@
   "private": true,
   "packageManager": "pnpm@7.28.0",
   "scripts": {
-    "dev": "vite --port 3006"
+    "dev": "vite --port 3006",
+    "build": "vite-ssg build"
   },
   "eslintConfig": {
     "extends": "@antfu",

@@ -14,4 +14,3 @@ function highlight() {
   console.log(foo)
 }
 ```
-
