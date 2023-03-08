@@ -8,7 +8,7 @@ export function getPosts() {
         && route.meta.frontmatter.createdAt
         && route.name
   })
-    .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
+    .sort((a, b) => +new Date(b.meta.frontmatter.createdAt) - +new Date(a.meta.frontmatter.createdAt))
     .map(route => ({
       path: route.path,
       ...route.meta.frontmatter,
