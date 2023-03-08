@@ -17,4 +17,7 @@ const routes = setupLayouts(autoRoutes.map((route) => {
 export const createApp = ViteSSG(
   App,
   { routes },
+  // (ctx) => {
+  //   console.log('ctx:', ctx)
+  // },
 )

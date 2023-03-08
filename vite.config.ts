@@ -1,3 +1,5 @@
+import { resolve } from 'node:path'
+import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import Unocss from 'unocss/vite'
 import Vue from '@vitejs/plugin-vue'
@@ -5,7 +7,9 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import generateSitemap from 'vite-ssg-sitemap'
 
+import matter from 'gray-matter'
 import Markdown from 'vite-plugin-vue-markdown'
 import LinkAttributes from 'markdown-it-link-attributes'
 // @ts-expect-error types not found
@@ -23,7 +27,13 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       dirs: 'pages',
       extendRoute(route) {
-        // TODO: pages 待扩展
+        const path = resolve(__dirname, route.component.slice(1))
+        if (path.endsWith('.md')) {
+          const md = readFileSync(path, 'utf-8')
+          const { data } = matter(md)
+
+          route.meta = { ...route.meta || {}, frontmatter: data, layout: data.layout }
+        }
         return route
       },
     }),
@@ -31,7 +41,7 @@ export default defineConfig({
     Layouts(),
 
     AutoImport({
-      imports: ['vue', 'vue-router', '@vueuse/core'],
+      imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
       dirs: [
         'src/composables',
       ],
@@ -51,14 +61,9 @@ export default defineConfig({
 
     Markdown({
       wrapperClasses: 'prose prose-sm m-auto text-left',
-      // headEnabled: true,
+      headEnabled: true,
       markdownItSetup(md) {
         md.use(Shiki, {
-          // theme: {
-          //   light: 'github-light',
-          //   dark: 'github-dark',
-          // },
-          // theme: 'vitesse-dark',
           theme: 'material-theme-palenight',
         })
         md.use(LinkAttributes, {
@@ -68,9 +73,14 @@ export default defineConfig({
             rel: 'noopener',
           },
         })
-
         md.use(LineHighlight)
       },
     }),
   ],
+
+  ssgOptions: {
+    script: 'async',
+    formatting: 'minify',
+    onFinished() { generateSitemap() },
+  },
 })

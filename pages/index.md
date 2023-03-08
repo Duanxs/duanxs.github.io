@@ -1,6 +1,19 @@
 ---
 title: 测试
+# layout: home
+tags:
+  - javascript
 ---
+
+<!-- <route lang="yaml">
+meta:
+  layout: home
+</route> -->
+
+{{frontmatter}}
+
+<HomePosts />
+
 
 <div class="text-center">
   <!-- You can use Vue components inside markdown -->
