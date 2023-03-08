@@ -1,8 +1,6 @@
-import type { Post } from '~/types'
-
 export function getPosts() {
   const router = useRouter()
-  const posts: Post[] = router.getRoutes().filter((route) => {
+  const posts = router.getRoutes().filter((route) => {
     return route.path.startsWith('/posts')
         && !route.path.endsWith('.html')
         && route.meta.frontmatter.createdAt
