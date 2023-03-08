@@ -1,23 +1,5 @@
 ---
-title: 测试
-# layout: home
-tags:
-  - javascript
+title: 首页 - 孤梧
 ---
 
 <HomePosts />
-
-<div class="text-center">
-  <!-- You can use Vue components inside markdown -->
-  <div i-icon-park-outline-book class="text-4xl -mb-6 m-auto" />
-  <h3>About</h3>
-</div>
-
-<!-- more -->
-
-```js {2,3}
-function highlight() {
-  const foo = 'bar'
-  console.log(foo)
-}
-```

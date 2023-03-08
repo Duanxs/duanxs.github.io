@@ -3,7 +3,7 @@ export interface Post {
   title: string
   createdAt: string
   updatedAt: string
-  tag: string[]
+  tags: string[]
   category: string
   description: string
 }
