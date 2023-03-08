@@ -9,17 +9,19 @@
     "extends": "@antfu",
     "rules": {
       "vue/no-v-text-v-html-on-component": "off",
-      "curly": "error"
+      "curly": "off"
     }
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
     "@iconify-json/icon-park-outline": "^1.1.10",
+    "@types/cross-spawn": "^6.0.2",
     "@types/markdown-it-link-attributes": "^3.0.1",
     "@types/node": "^18.14.6",
     "@unocss/preset-icons": "^0.50.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vueuse/head": "^1.1.15",
+    "cross-spawn": "^7.0.3",
     "gray-matter": "^4.0.3",
     "markdown-it-highlight-lines": "^1.0.2",
     "markdown-it-link-attributes": "^4.0.1",

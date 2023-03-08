@@ -31,7 +31,6 @@ export default defineConfig({
         if (path.endsWith('.md')) {
           const md = readFileSync(path, 'utf-8')
           const { data } = matter(md)
-
           route.meta = { ...route.meta || {}, frontmatter: data, layout: data.layout }
         }
         return route
@@ -62,6 +61,7 @@ export default defineConfig({
     Markdown({
       wrapperClasses: 'prose prose-sm m-auto text-left',
       headEnabled: true,
+      excerpt: true,
       markdownItSetup(md) {
         md.use(Shiki, {
           theme: 'material-theme-palenight',
@@ -75,6 +75,13 @@ export default defineConfig({
         })
         md.use(LineHighlight)
       },
+      // frontmatterOptions: {
+      //   renderExcerpt: true,
+      //   grayMatterOptions: {
+      //     excerpt: true,
+      //     excerpt_separator: '<!-- more -->',
+      //   },
+      // },
     }),
   ],
 

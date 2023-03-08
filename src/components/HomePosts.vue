@@ -1,11 +1,24 @@
 <script lang="ts" setup>
-const router = useRouter()
-console.log('router:', router.getRoutes().filter(i => i.meta.frontmatter))
+const posts = getPosts()
 </script>
 
 <template>
-  <div>
-    123
+  <div class="content">
+    <div class="posts-list">
+      <article v-for="post in posts" :key="post.path">
+        <header>
+          <div class="title">
+            {{ post.title }}
+          </div>
+          <div class="meta">
+            {{ formatDate(post.createdAt) }}
+          </div>
+        </header>
+        <div>
+          {{ post.description }}
+        </div>
+      </article>
+    </div>
   </div>
 </template>
 

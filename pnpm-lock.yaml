@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.36.0
   '@iconify-json/icon-park-outline': ^1.1.10
+  '@types/cross-spawn': ^6.0.2
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/node': ^18.14.6
   '@unocss/preset-icons': ^0.50.4
@@ -10,6 +11,7 @@ specifiers:
   '@vitejs/plugin-vue': ^4.0.0
   '@vueuse/core': ^9.13.0
   '@vueuse/head': ^1.1.15
+  cross-spawn: ^7.0.3
   gray-matter: ^4.0.3
   markdown-it-highlight-lines: ^1.0.2
   markdown-it-link-attributes: ^4.0.1
@@ -36,11 +38,13 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.36.0_ycpbpc6yetojsgtrx3mwntkhsu
   '@iconify-json/icon-park-outline': 1.1.10
+  '@types/cross-spawn': 6.0.2
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/node': 18.14.6
   '@unocss/preset-icons': 0.50.4
   '@vitejs/plugin-vue': 4.0.0_vite@4.1.4+vue@3.2.47
   '@vueuse/head': 1.1.15_vue@3.2.47
+  cross-spawn: 7.0.3
   gray-matter: 4.0.3
   markdown-it-highlight-lines: 1.0.2
   markdown-it-link-attributes: 4.0.1
@@ -807,6 +811,12 @@ packages:
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
+    dev: true
+
+  /@types/cross-spawn/6.0.2:
+    resolution: {integrity: sha512-KuwNhp3eza+Rhu8IFI5HUXRP0LIhqH5cAjubUvGXXthh4YYBuP2ntwEX+Cz8GJoZUHlKo247wPWOfA9LYEq4cw==}
+    dependencies:
+      '@types/node': 18.14.6
     dev: true
 
   /@types/debug/4.1.7:
