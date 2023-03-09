@@ -5,7 +5,7 @@
 .prose .shiki {
   /* font-family: 'DM Mono', monospace; */
   /* font-size: 1.2rem; */
-  /* line-height: 1.4; */
+  line-height: 1.4;
 }
 
 .prose img {

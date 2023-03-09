@@ -15,6 +15,8 @@ import LinkAttributes from 'markdown-it-link-attributes'
 // @ts-expect-error types not found
 import LineHighlight from 'markdown-it-highlight-lines'
 import Shiki from 'markdown-it-shiki'
+// @ts-expect-error types not found
+import Sup from 'markdown-it-sup'
 import { containerPlugin } from './plugins/markdown/container'
 
 export default defineConfig({
@@ -63,6 +65,10 @@ export default defineConfig({
       wrapperClasses: 'prose prose-sm m-auto text-left',
       headEnabled: true,
       excerpt: true,
+      markdownItOptions: {
+        typographer: true,
+        linkify: true,
+      },
       markdownItSetup(md) {
         md.use(Shiki, {
           theme: 'material-theme-palenight',
@@ -75,7 +81,7 @@ export default defineConfig({
           },
         })
         md.use(LineHighlight)
-        // md.use()
+        md.use(Sup)
         containerPlugin(md)
       },
       // frontmatterOptions: {

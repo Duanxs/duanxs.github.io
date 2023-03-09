@@ -20,6 +20,7 @@ specifiers:
   markdown-it-highlight-lines: ^1.0.2
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.8.0
+  markdown-it-sup: ^1.0.0
   nanoid: ^4.0.1
   typescript: ^4.9.5
   unocss: ^0.50.3
@@ -58,6 +59,7 @@ devDependencies:
   markdown-it-highlight-lines: 1.0.2
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.8.0
+  markdown-it-sup: 1.0.0
   nanoid: 4.0.1
   typescript: 4.9.5
   unocss: 0.50.3_postcss@8.4.21+vite@4.1.4
@@ -3541,6 +3543,10 @@ packages:
     dependencies:
       shiki: 0.14.1
       synckit: 0.8.5
+    dev: true
+
+  /markdown-it-sup/1.0.0:
+    resolution: {integrity: sha512-E32m0nV9iyhRR7CrhnzL5msqic7rL1juWre6TQNxsnApg7Uf+F97JOKxUijg5YwXz86lZ0mqfOnutoryyNdntQ==}
     dev: true
 
   /markdown-it/13.0.1:
