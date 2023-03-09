@@ -15,6 +15,7 @@ import LinkAttributes from 'markdown-it-link-attributes'
 // @ts-expect-error types not found
 import LineHighlight from 'markdown-it-highlight-lines'
 import Shiki from 'markdown-it-shiki'
+import { containerPlugin } from './plugins/markdown/container'
 
 export default defineConfig({
   plugins: [
@@ -74,6 +75,8 @@ export default defineConfig({
           },
         })
         md.use(LineHighlight)
+        // md.use()
+        containerPlugin(md)
       },
       // frontmatterOptions: {
       //   renderExcerpt: true,

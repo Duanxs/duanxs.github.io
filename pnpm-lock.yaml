@@ -4,6 +4,8 @@ specifiers:
   '@antfu/eslint-config': ^0.36.0
   '@iconify-json/icon-park-outline': ^1.1.10
   '@types/cross-spawn': ^6.0.2
+  '@types/markdown-it': ^12.2.3
+  '@types/markdown-it-container': ^2.0.5
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/node': ^18.14.6
   '@unocss/preset-icons': ^0.50.4
@@ -13,9 +15,12 @@ specifiers:
   '@vueuse/head': ^1.1.15
   cross-spawn: ^7.0.3
   gray-matter: ^4.0.3
+  markdown-it: ^13.0.1
+  markdown-it-container: ^3.0.0
   markdown-it-highlight-lines: ^1.0.2
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.8.0
+  nanoid: ^4.0.1
   typescript: ^4.9.5
   unocss: ^0.50.3
   unplugin-auto-import: ^0.15.0
@@ -39,6 +44,8 @@ devDependencies:
   '@antfu/eslint-config': 0.36.0_ycpbpc6yetojsgtrx3mwntkhsu
   '@iconify-json/icon-park-outline': 1.1.10
   '@types/cross-spawn': 6.0.2
+  '@types/markdown-it': 12.2.3
+  '@types/markdown-it-container': 2.0.5
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/node': 18.14.6
   '@unocss/preset-icons': 0.50.4
@@ -46,9 +53,12 @@ devDependencies:
   '@vueuse/head': 1.1.15_vue@3.2.47
   cross-spawn: 7.0.3
   gray-matter: 4.0.3
+  markdown-it: 13.0.1
+  markdown-it-container: 3.0.0
   markdown-it-highlight-lines: 1.0.2
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.8.0
+  nanoid: 4.0.1
   typescript: 4.9.5
   unocss: 0.50.3_postcss@8.4.21+vite@4.1.4
   unplugin-auto-import: 0.15.0_@vueuse+core@9.13.0
@@ -839,6 +849,12 @@ packages:
 
   /@types/linkify-it/3.0.2:
     resolution: {integrity: sha512-HZQYqbiFVWufzCwexrvh694SOim8z2d+xJl5UNamcvQFejLY/2YUtzXHYi3cHdI7PMlS8ejH2slRAOJQ32aNbA==}
+    dev: true
+
+  /@types/markdown-it-container/2.0.5:
+    resolution: {integrity: sha512-8v5jIC5gcCUv+JcD0DExwNBkoKC0kLB4acensF0NoNlTIcXmQxF3RDjzAdIW82sXSoR+n772ePguxIWlq2ELvA==}
+    dependencies:
+      '@types/markdown-it': 12.2.3
     dev: true
 
   /@types/markdown-it-link-attributes/3.0.1:
@@ -3508,6 +3524,10 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /markdown-it-container/3.0.0:
+    resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
+    dev: true
+
   /markdown-it-highlight-lines/1.0.2:
     resolution: {integrity: sha512-9Pyt/B+Ca3QBSXDS/znmojy/k6HDe8FJlJwIj/BKgvxE3MQWK9GHQCJJT5Lb1er23svZT99kJ/YRhLpDK+5GUQ==}
     dev: true
@@ -3695,6 +3715,12 @@ packages:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
+
+  /nanoid/4.0.1:
+    resolution: {integrity: sha512-udKGtCCUafD3nQtJg9wBhRP3KMbPglUsgV5JVsXhvyBs/oefqb4sqMEhKBBgqZncYowu58p1prsZQBYvAj/Gww==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: true
 
   /natural-compare-lite/1.4.0:
     resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}

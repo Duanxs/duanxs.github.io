@@ -1,0 +1,142 @@
+:root {
+  --custom-block-info-text: #3c3c43;
+  --custom-block-info-code-bg: #f6f6f7;
+  --custom-block-tip-border: #007aff;
+  --custom-block-tip-text: #007aff;
+  --custom-block-tip-bg: #e6f2ff;
+  --custom-block-tip-code-bg: #e6f2ff;
+  --custom-block-warning-border: #ff9500;
+  --custom-block-warning-text: #ff9500;
+  --custom-block-warning-bg: #fff5e5;
+  --custom-block-warning-code-bg: #fff5e5;
+  --custom-block-danger-border: #ff3b30;
+  --custom-block-danger-text: #ff3b30;
+  --custom-block-danger-bg: #ffebe8;
+  --custom-block-danger-code-bg: #ffebe8;
+  --custom-block-details-border: #007aff;
+  --custom-block-details-text: #007aff;
+  --custom-block-details-bg: #e6f2ff;
+  --custom-block-details-code-bg: #e6f2ff;
+  --custom-block-code-font-size: 14px;
+  --custom-block-font-size: 14px;
+}
+
+.dark {
+  --custom-block-info-text: #c7c7cc;
+  --custom-block-info-code-bg: #1e1e1e;
+  --custom-block-tip-border: #0a84ff;
+  --custom-block-tip-text: #0a84ff;
+  --custom-block-tip-bg: #0f1624;
+  --custom-block-tip-code-bg: #0f1624;
+  --custom-block-warning-border: #ff9500;
+  --custom-block-warning-text: #ff9500;
+  --custom-block-warning-bg: #1e1e1e;
+  --custom-block-warning-code-bg: #1e1e1e;
+  --custom-block-danger-border: #ff453a;
+  --custom-block-danger-text: #ff453a;
+  --custom-block-danger-bg: #1e1e1e;
+  --custom-block-danger-code-bg: #1e1e1e;
+  --custom-block-details-border: #0a84ff;
+  --custom-block-details-text: #0a84ff;
+  --custom-block-details-bg: #0f1624;
+  --custom-block-details-code-bg: #0f1624;
+  --custom-block-code-font-size: 14px;
+  --custom-block-font-size: 14px;
+}
+
+.custom-block {
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.25rem 1rem;
+  line-height: 1.5rem;
+  color: var(--custom-block-info-text);
+}
+
+.custom-block p {
+  margin: 0
+}
+
+.custom-block.info {
+  border-color: var(--custom-block-info-border);
+  color: var(--custom-block-info-text);
+  background-color: var(--custom-block-info-bg);
+}
+
+.custom-block.info code {
+  background-color: var(--custom-block-info-code-bg);
+}
+
+.custom-block.tip {
+  border-color: var(--custom-block-tip-border);
+  color: var(--custom-block-tip-text);
+  background-color: var(--custom-block-tip-bg);
+}
+
+.custom-block.tip code {
+  background-color: var(--custom-block-tip-code-bg);
+}
+
+.custom-block.warning {
+  border-color: var(--custom-block-warning-border);
+  color: var(--custom-block-warning-text);
+  background-color: var(--custom-block-warning-bg);
+}
+
+.custom-block.warning code {
+  background-color: var(--custom-block-warning-code-bg);
+}
+
+.custom-block.danger {
+  border-color: var(--custom-block-danger-border);
+  color: var(--custom-block-danger-text);
+  background-color: var(--custom-block-danger-bg);
+}
+
+.custom-block.danger code {
+  background-color: var(--custom-block-danger-code-bg);
+}
+
+.custom-block.details {
+  border-color: var(--custom-block-details-border);
+  color: var(--custom-block-details-text);
+  background-color: var(--custom-block-details-bg);
+}
+
+.custom-block.details code {
+  background-color: var(--custom-block-details-code-bg);
+}
+
+.custom-block .custom-block-title {
+  font-weight: 600;
+}
+
+.custom-block p + p {
+  margin: qrem 0;
+}
+
+.custom-block.details summary {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.custom-block.details summary + p {
+  margin: 1rem 0;
+}
+
+.custom-block a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.25s;
+}
+
+.custom-block a:hover {
+  opacity: 0.6;
+}
+
+.custom-block code {
+  font-size: var(--custom-block-code-font-size);
+}
