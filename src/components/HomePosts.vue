@@ -1,8 +1,5 @@
 <script lang="ts" setup>
 const posts = getPosts()
-
-const isFormatDate = ref(true)
-const toggleDate = useToggle(isFormatDate)
 </script>
 
 <template>

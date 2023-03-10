@@ -3,5 +3,5 @@
   <main px-4>
     <RouterView />
   </main>
-  <Footer />
+  <Footer px-4 />
 </template>

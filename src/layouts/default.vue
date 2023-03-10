@@ -1,8 +1,13 @@
+<script setup lang="ts">
+const elRef = ref<HTMLElement>()
+</script>
+
 <template>
   <NavBar />
-  <main px-4>
+  <main ref="elRef" px-4>
     <PostHeader />
-    <RouterView />
+    <RouterView id="post" />
   </main>
-  <Footer />
+  <Footer px-4 />
+  <BackToTop :offset-x="2" :offset-y="2" position="br" el="#post" unit="rem" />
 </template>
