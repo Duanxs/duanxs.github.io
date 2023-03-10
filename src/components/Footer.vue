@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed left-0 bottom-0 w-full mt-10 mb-4 flex justify-center items-center">
+  <footer class="mt-10 pb-4 flex justify-center items-center">
     <div class="text-sm prose opacity-50">
       <a
         target="_blank" href="https://license.coscl.org.cn/MulanOWLBYSAv1"
