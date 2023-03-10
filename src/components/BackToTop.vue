@@ -8,7 +8,11 @@ const props = defineProps<{
 }>()
 
 const { width: clientWidth } = useWindowSize()
-const { right, left } = useElementBounding(document.querySelector(props.el) as HTMLElement)
+const el = ref<HTMLElement>()
+onMounted(() => {
+  el.value = document.querySelector(props.el) as HTMLElement
+})
+const { right, left } = useElementBounding(el.value)
 
 /** x 出界则内收 */
 const calcX = (x = 0, widthX: number, clientWidth: number) => {
