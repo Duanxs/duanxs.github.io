@@ -4,4 +4,5 @@
     <PostHeader />
     <RouterView />
   </main>
+  <Footer />
 </template>
