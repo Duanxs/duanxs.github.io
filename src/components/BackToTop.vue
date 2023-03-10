@@ -12,7 +12,7 @@ const el = ref<HTMLElement>()
 onMounted(() => {
   el.value = document.querySelector(props.el) as HTMLElement
 })
-const { right, left } = useElementBounding(el.value)
+const { right, left } = useElementBounding(el)
 
 /** x 出界则内收 */
 const calcX = (x = 0, widthX: number, clientWidth: number) => {
