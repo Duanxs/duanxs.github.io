@@ -9,7 +9,7 @@
       </router-link>
     </div>
     <nav grid="~ gap-6 auto-flow-col lt-md:gap-4" opacity-60>
-      <router-link to="/posts">
+      <router-link to="/">
         <span lt-md:hidden>文章</span>
         <i md:hidden i-icon-park-outline-list-view />
       </router-link>
