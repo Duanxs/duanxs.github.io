@@ -17,7 +17,6 @@ specifiers:
   gray-matter: ^4.0.3
   markdown-it: ^13.0.1
   markdown-it-container: ^3.0.0
-  markdown-it-highlight-lines: ^1.0.2
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.8.0
   markdown-it-sup: ^1.0.0
@@ -56,7 +55,6 @@ devDependencies:
   gray-matter: 4.0.3
   markdown-it: 13.0.1
   markdown-it-container: 3.0.0
-  markdown-it-highlight-lines: 1.0.2
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.8.0
   markdown-it-sup: 1.0.0
@@ -3528,10 +3526,6 @@ packages:
 
   /markdown-it-container/3.0.0:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
-    dev: true
-
-  /markdown-it-highlight-lines/1.0.2:
-    resolution: {integrity: sha512-9Pyt/B+Ca3QBSXDS/znmojy/k6HDe8FJlJwIj/BKgvxE3MQWK9GHQCJJT5Lb1er23svZT99kJ/YRhLpDK+5GUQ==}
     dev: true
 
   /markdown-it-link-attributes/4.0.1:

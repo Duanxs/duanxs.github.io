@@ -12,8 +12,7 @@ import generateSitemap from 'vite-ssg-sitemap'
 import matter from 'gray-matter'
 import Markdown from 'vite-plugin-vue-markdown'
 import LinkAttributes from 'markdown-it-link-attributes'
-// @ts-expect-error types not found
-import LineHighlight from 'markdown-it-highlight-lines'
+import type { Options as ShikiOptions } from 'markdown-it-shiki'
 import Shiki from 'markdown-it-shiki'
 // @ts-expect-error types not found
 import Sup from 'markdown-it-sup'
@@ -71,8 +70,9 @@ export default defineConfig({
       },
       markdownItSetup(md) {
         md.use(Shiki, {
+          highlighte: true,
           theme: 'material-theme-palenight',
-        })
+        } as ShikiOptions)
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
@@ -80,7 +80,6 @@ export default defineConfig({
             rel: 'noopener',
           },
         })
-        md.use(LineHighlight)
         md.use(Sup)
         containerPlugin(md)
       },
