@@ -70,7 +70,7 @@ export default defineConfig({
       },
       markdownItSetup(md) {
         md.use(Shiki, {
-          highlighte: true,
+          highlightLines: true,
           theme: 'material-theme-palenight',
         } as ShikiOptions)
         md.use(LinkAttributes, {

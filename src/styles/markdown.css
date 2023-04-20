@@ -40,9 +40,15 @@ pre, pre[class*="language-"] {
   overflow: auto;
 }
 
-.highlighted-line {
+.shiki code { 
+  display: flex;
+  flex-direction: column;
+}
+
+.highlighted {
   background-color: var(--highlight-line-bg);
   display: block;
   margin: 0 -1.575rem;
   padding: 0 1.575rem;
 }
+
